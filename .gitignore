@@ -131,3 +131,4 @@ _trial_temp/
 .idea/
 .idea/*.xml
 .idea/*.iml
+.pytest_cache
