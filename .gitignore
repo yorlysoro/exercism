@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+_trial_temp/
+.idea/
+.idea/*.xml
+.idea/*.iml
