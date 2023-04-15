@@ -1,8 +1,11 @@
 import unittest
-from lasagna import (EXPECTED_BAKE_TIME,
-                     preparation_time_in_minutes,
-                     elapsed_time_in_minutes,
-                     bake_time_remaining)
+
+from lasagna import (
+    EXPECTED_BAKE_TIME,
+    preparation_time_in_minutes,
+    elapsed_time_in_minutes,
+    bake_time_remaining
+)
 
 
 class MyTestCase(unittest.TestCase):
