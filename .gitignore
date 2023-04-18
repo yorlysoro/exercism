@@ -132,3 +132,4 @@ _trial_temp/
 .idea/*.xml
 .idea/*.iml
 .pytest_cache
+.vscode/
