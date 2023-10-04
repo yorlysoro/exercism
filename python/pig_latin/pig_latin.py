@@ -5,10 +5,10 @@ def translate(text):
     xr = 'xr'
     yt = 'yt'
     new_text = ''
-    words = text.split(' ')
+    words = text.lower().split(' ')
     for word in words:
         index_qu = word.find(qu)
-        if index_qu > 0 and word[0] not in vowels:
+        if index_qu > -1 and word[0] not in vowels:
             count = 0
             for i in word:
                 if i in consonants or i == 'u':
