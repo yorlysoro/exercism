@@ -10,6 +10,9 @@ class Calculator():
     add_trigger = False
     sub_trigger = False
 
+    def button_clear_ac(self):
+        self.number_entry.delete(0, "end")
+
     def button_press(self, value):
         entry_val = self.number_entry.get()
         entry_val += value
@@ -44,13 +47,13 @@ class Calculator():
         solution = 0
         if self.add_trigger or self.sub_trigger or self.mult_trigger or self.div_trigger:
             if self.add_trigger:
-                solution += float(self.number_entry.get())
+                solution = self.calc_value + float(self.number_entry.get())
             elif self.sub_trigger:
-                solution -= float(self.number_entry.get())
+                solution = self.calc_value - float(self.number_entry.get())
             elif self.mult_trigger:
-                solution *= float(self.number_entry.get())
+                solution = self.calc_value * float(self.number_entry.get())
             elif self.div_trigger:
-                solution /= float(self.number_entry.get())
+                solution = self.calc_value / float(self.number_entry.get())
 
             self.number_entry.delete(0, "end")
             self.number_entry.insert(0, solution)
@@ -105,7 +108,7 @@ class Calculator():
         self.button_add = ttk.Button(root, text="+", command=lambda: self.math_button_press("+"))
         self.button_add.grid(row=3, column=3)
 
-        self.button_clear = ttk.Button(root, text="AC", command=lambda: self.button_press("AC"))
+        self.button_clear = ttk.Button(root, text="AC", command=lambda: self.button_clear_ac())
         self.button_clear.grid(row=4, column=0)
 
         self.button0 = ttk.Button(root, text="0", command=lambda: self.button_press("0"))
